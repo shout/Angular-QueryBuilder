@@ -1,6 +1,8 @@
 import webpackTestConfig from './webpack-test.config';
 import { ConfigOptions } from 'karma';
 
+process.env.CHROME_BIN = require('puppeteer').executablePath()
+
 export default (config) => {
   config.set({
     // Base path that will be used to resolve all patterns (eg. files, exclude).
@@ -14,6 +16,15 @@ export default (config) => {
     files: [
       'karma-test-entry.ts'
     ],
+
+    // custom ChromeHeadless launcher
+    browsers: ['ChromeHeadless'],
+    customLaunchers: {
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      }
+    },
 
     // Preprocess matching files before serving them to the browser.
     // Available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
@@ -57,7 +68,6 @@ export default (config) => {
 
     // Start these browsers.
     // Available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
 
     browserConsoleLogOptions: {
       terminal: true,
