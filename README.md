@@ -1,14 +1,23 @@
 # Angular-QueryBuilder
-A modernized Angular 4+ query builder based on jQuery QueryBuilder. Support for heavy customization with Angular components and provides a flexible way to handle custom data types.
+Fork of [zebzhao/Angular-QueryBuilder](https://github.com/zebzhao/Angular-QueryBuilder), maintained by [Shout.com](https://shout.com)
+
+A modernized Angular 16+ query builder based on jQuery QueryBuilder. Support for heavy customization with Angular 
+components and provides a flexible way to handle custom data types.
 
 # Getting Started
 
 ## Install
+Angular 16
 
-- Angular 9, use 0.6.0
-- Angular 8, use 0.5.1
-- Angular 6-7, use 0.4.2
-- Angular 4-5, use 0.3.2
+`npm install shout-angular-query-builder`
+
+## Legacy Install
+
+- Angular 10-15 use [angular2-query-builder](https://www.npmjs.com/package/angular2-query-builder) 0.6.2
+- Angular 9, use [angular2-query-builder](https://www.npmjs.com/package/angular2-query-builder) 0.6.0
+- Angular 8, use [angular2-query-builder](https://www.npmjs.com/package/angular2-query-builder) 0.5.1
+- Angular 6-7, use [angular2-query-builder](https://www.npmjs.com/package/angular2-query-builder) 0.4.2
+- Angular 4-5, use [angular2-query-builder](https://www.npmjs.com/package/angular2-query-builder) 0.3.2
 
 `npm install angular2-query-builder`
 
@@ -72,7 +81,7 @@ export class AppComponent {
   }
 }
 ```
-
+~~~~
 ## Custom Input Components
 
 ##### `app.component.html`
@@ -309,7 +318,7 @@ Directive to replace the default remove single rule button component.
 |`removeRule`|`(rule: Rule) => void`|Function to handle removing a rule|
 
 ## Dependencies
-- Angular 8+
+- Angular 16+
 
 That's it.
 

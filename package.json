@@ -1,5 +1,5 @@
 {
-  "name": "angular2-query-builder",
+  "name": "shout-angular-query-builder",
   "version": "0.6.2",
   "description": "A modernized Angular 2+ query builder based on jquery QueryBuilder",
   "main": "./dist/angular2-query-builder/bundles/angular2-query-builder.umd.js",
@@ -17,17 +17,17 @@
     "visual"
   ],
   "author": {
-    "name": "Zeb Zhao",
-    "url": "https://github.com/zebzhao/"
+    "name": "Shout",
+    "url": "https://github.com/shout/"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zebzhao/Angular-QueryBuilder"
+    "url": "https://github.com/shout/Angular-QueryBuilder"
   },
   "bugs": {
-    "url": "https://github.com/zebzhao/Angular-QueryBuilder/issues"
+    "url": "https://github.com/shout/Angular-QueryBuilder/issues"
   },
-  "homepage": "https://github.com/zebzhao/Angular-QueryBuilder#readme",
+  "homepage": "https://github.com/shout/Angular-QueryBuilder#readme",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -59,7 +59,6 @@
   "peerDependencies": {},
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.6",
-    "@angular-devkit/build-ng-packagr": "^0.1002.4",
     "@angular/cli": "^16.2.6",
     "@angular/common": "^16.2.10",
     "@angular/compiler": "^16.2.10",
@@ -90,8 +89,8 @@
     "rxjs": "~7.8.1",
     "ts-node": "^10.9.1",
     "eslint": "^8.51.0",
-    "typescript": "^5.2.2",
-    "zone.js": "~0.14.0",
+    "typescript": "5.1.6",
+    "zone.js": "~0.13.3",
     "puppeteer": "^21.3.8"
   },
   "dependencies": {
