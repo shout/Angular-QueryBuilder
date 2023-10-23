@@ -29,15 +29,10 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/angular2-query-builder/tsconfig.lib.json",
-              "projects/angular2-query-builder/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "eslintConfig": ".eslintrc.js",
+            "lintFilePatterns": ["**/*.spec.ts", "**/*.ts"]
           }
         }
       }
