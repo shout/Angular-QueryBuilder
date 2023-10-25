@@ -6,7 +6,7 @@ It represents the closest reasonable ESLint configuration to this
 project's original TSLint configuration.
 
 We recommend eventually switching this configuration to extend from
-the recommended rulesets in typescript-eslint. 
+the recommended rulesets in typescript-eslint.
 https://github.com/typescript-eslint/tslint-to-eslint-config/blob/master/docs/FAQs.md
 
 Happy linting! 💖
@@ -110,7 +110,8 @@ module.exports = {
                 }
             }
         ],
-        "@typescript-eslint/member-ordering": "error",
+        "@typescript-eslint/member-ordering": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
         "@typescript-eslint/naming-convention": [
             "off",
             {
@@ -125,7 +126,7 @@ module.exports = {
         ],
         "@typescript-eslint/no-empty-function": "off",
         "@typescript-eslint/no-empty-interface": "error",
-        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-explicit-any": 0,
         "@typescript-eslint/no-misused-new": "error",
         "@typescript-eslint/no-namespace": "error",
         "@typescript-eslint/no-parameter-properties": "off",
@@ -163,6 +164,10 @@ module.exports = {
         "@typescript-eslint/type-annotation-spacing": "error",
         "@typescript-eslint/typedef": "off",
         "@typescript-eslint/unified-signatures": "error",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-unused-vars": "off",
         "arrow-body-style": "error",
         "arrow-parens": [
             "error",
@@ -190,11 +195,8 @@ module.exports = {
             "error",
             "any",
             "Number",
-            "number",
             "String",
-            "string",
             "Boolean",
-            "boolean",
             "Undefined",
             "undefined"
         ],
@@ -268,7 +270,7 @@ module.exports = {
         "indent": "off",
         "jsdoc/check-alignment": "error",
         "jsdoc/check-indentation": "error",
-        "jsdoc/newline-after-description": "error",
+        "jsdoc/newline-after-description": 0,
         "max-classes-per-file": [
             "error",
             1

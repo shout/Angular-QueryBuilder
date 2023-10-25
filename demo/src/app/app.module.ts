@@ -17,24 +17,24 @@ import { MatSelectModule } from '@angular/material/select';
 import { QueryBuilderModule } from 'angular2-query-builder';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    NoopAnimationsModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatSelectModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatRadioModule,
-    MatIconModule,
-    MatCardModule,
-    QueryBuilderModule
-  ],
-  declarations: [ AppComponent ],
-  bootstrap: [ AppComponent ]
+    imports: [
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        NoopAnimationsModule,
+        MatButtonModule,
+        MatCheckboxModule,
+        MatSelectModule,
+        MatInputModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatRadioModule,
+        MatIconModule,
+        MatCardModule,
+        QueryBuilderModule
+    ],
+    declarations: [ AppComponent ],
+    bootstrap: [ AppComponent ]
 })
 export class AppModule {
 }

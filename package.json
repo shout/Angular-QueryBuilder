@@ -1,20 +1,32 @@
 {
   "name": "shout-angular-query-builder",
-  "version": "0.7.0",
+  "version": "0.7.10",
   "description": "A modernized Angular 16+ query builder based on jquery QueryBuilder",
-  "main": "./dist/angular2-query-builder/bundles/angular2-query-builder.umd.js",
-  "module": "./dist/angular2-query-builder/esm5/angular2-query-builder.js",
-  "typings": "./dist/angular2-query-builder/angular2-query-builder.d.ts",
+  "module": "./dist/shout-angular-query-builder/fesm2022/shout-angular-query-builder.mjs",
+  "typings": "./dist/shout-angular-query-builder/index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./dist/shout-angular-query-builder/index.d.ts",
+      "esm2022": "./dist/shout-angular-query-builder/esm2022/shout-angular-query-builder.mjs",
+      "esm": "./dist/shout-angular-query-builder/esm2022/shout-angular-query-builder.mjs",
+      "default": "./dist/shout-angular-query-builder/fesm2022/shout-angular-query-builder.mjs"
+    }
+  },
   "license": "MIT",
   "private": false,
   "keywords": [
     "angular",
-    "angular8",
+    "angular16",
     "query",
     "builder",
     "jquery",
     "querybuilder",
-    "visual"
+    "visual",
+    "angular2-query-builder",
+    "Angular-QueryBuilder"
   ],
   "author": {
     "name": "Shout",
@@ -31,8 +43,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build angular2-query-builder",
-    "build:watch": "ng build angular2-query-builder --watch=true",
+    "build": "ng build shout-angular-query-builder",
+    "build:watch": "ng build shout-angular-query-builder --watch=true",
     "test": "ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -45,7 +57,7 @@
     "clean:tmp": "rimraf coverage dist tmp docs",
     "codecov": "cat coverage/lcov.info | codecov",
     "docs": "compodoc -p tsconfig.json -d docs --disableCoverage",
-    "explorer": "source-map-explorer ./dist/angular2-query-builder/bundles/angular2-query-builder.umd.js",
+    "explorer": "source-map-explorer ./dist/shout-angular-query-builder/bundles/shout-angular-query-builder.umd.js",
     "copyDemo": "copyfiles -u 2 demo/dist/**/* docs",
     "gh-pages": "rimraf docs && npm run docs && npm run copyDemo && gh-pages -d docs",
     "postversion": "git push && git push --tags",

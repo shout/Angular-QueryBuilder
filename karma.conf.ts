@@ -1,80 +1,81 @@
 import webpackTestConfig from './webpack-test.config';
 import { ConfigOptions } from 'karma';
+import puppeteer from 'puppeteer';
 
-process.env.CHROME_BIN = require('puppeteer').executablePath()
+process.env.CHROME_BIN = puppeteer.executablePath();
 
 export default (config) => {
-  config.set({
+    config.set({
     // Base path that will be used to resolve all patterns (eg. files, exclude).
-    basePath: './',
+        basePath: './',
 
-    // Frameworks to use.
-    // Available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+        // Frameworks to use.
+        // Available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+        frameworks: ['jasmine'],
 
-    // List of files to load in the browser.
-    files: [
-      'karma-test-entry.ts'
-    ],
+        // List of files to load in the browser.
+        files: [
+            'karma-test-entry.ts'
+        ],
 
-    // custom ChromeHeadless launcher
-    browsers: ['ChromeHeadless'],
-    customLaunchers: {
-      ChromeHeadlessNoSandbox: {
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox']
-      }
-    },
+        // custom ChromeHeadless launcher
+        browsers: ['ChromeHeadless'],
+        customLaunchers: {
+            ChromeHeadlessNoSandbox: {
+                base: 'ChromeHeadless',
+                flags: ['--no-sandbox']
+            }
+        },
 
-    // Preprocess matching files before serving them to the browser.
-    // Available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-      'karma-test-entry.ts': ['webpack', 'sourcemap']
-    },
+        // Preprocess matching files before serving them to the browser.
+        // Available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+        preprocessors: {
+            'karma-test-entry.ts': ['webpack', 'sourcemap']
+        },
 
-    webpack: webpackTestConfig,
+        webpack: webpackTestConfig,
 
-    // Webpack please don't spam the console when running in karma!
-    webpackMiddleware: {
-      noInfo: true,
-      // Use stats to turn off verbose output.
-      stats: {
-        chunks: false
-      }
-    },
+        // Webpack please don't spam the console when running in karma!
+        webpackMiddleware: {
+            noInfo: true,
+            // Use stats to turn off verbose output.
+            stats: {
+                chunks: false
+            }
+        },
 
-    mime: {
-      'text/x-typescript': [ 'ts' ]
-    },
+        mime: {
+            'text/x-typescript': [ 'ts' ]
+        },
 
-    coverageIstanbulReporter: {
-      reports: ['text-summary', 'html', 'lcovonly'],
-      fixWebpackSourcePaths: true
-    },
+        coverageIstanbulReporter: {
+            reports: ['text-summary', 'html', 'lcovonly'],
+            fixWebpackSourcePaths: true
+        },
 
-    // Test results reporter to use.
-    // Possible values: 'dots', 'progress'.
-    // Available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['mocha', 'coverage-istanbul'],
+        // Test results reporter to use.
+        // Possible values: 'dots', 'progress'.
+        // Available reporters: https://npmjs.org/browse/keyword/karma-reporter
+        reporters: ['mocha', 'coverage-istanbul'],
 
-    // Level of logging
-    // Possible values:
-    // - config.LOG_DISABLE
-    // - config.LOG_ERROR
-    // - config.LOG_WARN
-    // - config.LOG_INFO
-    // - config.LOG_DEBUG
-    logLevel: config.LOG_WARN,
+        // Level of logging
+        // Possible values:
+        // - config.LOG_DISABLE
+        // - config.LOG_ERROR
+        // - config.LOG_WARN
+        // - config.LOG_INFO
+        // - config.LOG_DEBUG
+        logLevel: config.LOG_WARN,
 
-    // Start these browsers.
-    // Available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+        // Start these browsers.
+        // Available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
 
-    browserConsoleLogOptions: {
-      terminal: true,
-      level: 'log'
-    },
+        browserConsoleLogOptions: {
+            terminal: true,
+            level: 'log'
+        },
 
-    singleRun: true,
-    colors: true
-  } as ConfigOptions);
+        singleRun: true,
+        colors: true
+    } as ConfigOptions);
 };

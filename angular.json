@@ -3,29 +3,29 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular2-query-builder": {
+    "shout-angular-query-builder": {
       "projectType": "library",
-      "root": "projects/angular2-query-builder",
-      "sourceRoot": "projects/angular2-query-builder/src",
+      "root": "projects/shout-angular-query-builder",
+      "sourceRoot": "projects/shout-angular-query-builder/src",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/angular2-query-builder/tsconfig.lib.json",
-            "project": "projects/angular2-query-builder/ng-package.json"
+            "tsConfig": "projects/shout-angular-query-builder/tsconfig.lib.json",
+            "project": "projects/shout-angular-query-builder/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/angular2-query-builder/tsconfig.lib.prod.json"
+              "tsConfig": "projects/shout-angular-query-builder/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/angular2-query-builder/src/test.ts",
-            "tsConfig": "projects/angular2-query-builder/tsconfig.spec.json",
-            "karmaConfig": "projects/angular2-query-builder/karma.conf.js"
+            "main": "projects/shout-angular-query-builder/src/test.ts",
+            "tsConfig": "projects/shout-angular-query-builder/tsconfig.spec.json",
+            "karmaConfig": "projects/shout-angular-query-builder/karma.conf.js"
           }
         },
         "lint": {
