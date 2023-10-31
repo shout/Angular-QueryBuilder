@@ -27,7 +27,7 @@
     "@angular/platform-browser": "^9.0.2",
     "@angular/platform-browser-dynamic": "^9.0.2",
     "@angular/router": "^9.0.2",
-    "angular2-query-builder": "file:../dist/angular2-query-builder",
+    "shout-angular-query-builder": "file:../dist/shout-angular-query-builder",
     "core-js": "^2.6.5",
     "rxjs": "~6.5.2",
     "tslib": "^1.10.0",
