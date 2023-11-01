@@ -11,13 +11,13 @@ import 'zone.js/dist/jasmine-patch';
 import { TestBed } from '@angular/core/testing';
 
 import {
-  BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting
+    BrowserDynamicTestingModule,
+    platformBrowserDynamicTesting
 } from '@angular/platform-browser-dynamic/testing';
 
 TestBed.initTestEnvironment(
-  BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting()
+    BrowserDynamicTestingModule,
+    platformBrowserDynamicTesting()
 );
 
 const testsContext: any = require.context('./src', true, /\.spec/);

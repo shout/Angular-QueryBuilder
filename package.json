@@ -1,38 +1,50 @@
 {
-  "name": "angular2-query-builder",
-  "version": "0.6.2",
-  "description": "A modernized Angular 2+ query builder based on jquery QueryBuilder",
-  "main": "./dist/angular2-query-builder/bundles/angular2-query-builder.umd.js",
-  "module": "./dist/angular2-query-builder/esm5/angular2-query-builder.js",
-  "typings": "./dist/angular2-query-builder/angular2-query-builder.d.ts",
+  "name": "shout-angular-query-builder",
+  "version": "0.7.11",
+  "description": "A modernized Angular 16+ query builder based on jquery QueryBuilder",
+  "module": "./dist/shout-angular-query-builder/fesm2022/shout-angular-query-builder.mjs",
+  "typings": "./dist/shout-angular-query-builder/index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./dist/shout-angular-query-builder/index.d.ts",
+      "esm2022": "./dist/shout-angular-query-builder/esm2022/shout-angular-query-builder.mjs",
+      "esm": "./dist/shout-angular-query-builder/esm2022/shout-angular-query-builder.mjs",
+      "default": "./dist/shout-angular-query-builder/fesm2022/shout-angular-query-builder.mjs"
+    }
+  },
   "license": "MIT",
   "private": false,
   "keywords": [
     "angular",
-    "angular8",
+    "angular16",
     "query",
     "builder",
     "jquery",
     "querybuilder",
-    "visual"
+    "visual",
+    "angular2-query-builder",
+    "Angular-QueryBuilder"
   ],
   "author": {
-    "name": "Zeb Zhao",
-    "url": "https://github.com/zebzhao/"
+    "name": "Shout",
+    "url": "https://github.com/shout/"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zebzhao/Angular-QueryBuilder"
+    "url": "https://github.com/shout/Angular-QueryBuilder"
   },
   "bugs": {
-    "url": "https://github.com/zebzhao/Angular-QueryBuilder/issues"
+    "url": "https://github.com/shout/Angular-QueryBuilder/issues"
   },
-  "homepage": "https://github.com/zebzhao/Angular-QueryBuilder#readme",
+  "homepage": "https://github.com/shout/Angular-QueryBuilder#readme",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build angular2-query-builder",
-    "build:watch": "ng build angular2-query-builder --watch=true",
+    "build": "ng build shout-angular-query-builder",
+    "build:watch": "ng build shout-angular-query-builder --watch=true",
     "test": "ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -45,7 +57,7 @@
     "clean:tmp": "rimraf coverage dist tmp docs",
     "codecov": "cat coverage/lcov.info | codecov",
     "docs": "compodoc -p tsconfig.json -d docs --disableCoverage",
-    "explorer": "source-map-explorer ./dist/angular2-query-builder/bundles/angular2-query-builder.umd.js",
+    "explorer": "source-map-explorer ./dist/shout-angular-query-builder/bundles/shout-angular-query-builder.umd.js",
     "copyDemo": "copyfiles -u 2 demo/dist/**/* docs",
     "gh-pages": "rimraf docs && npm run docs && npm run copyDemo && gh-pages -d docs",
     "postversion": "git push && git push --tags",
@@ -56,44 +68,53 @@
     "test:watch": "ng test --watch=true",
     "tslint": "ng lint"
   },
-  "peerDependencies": {},
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.900.3",
-    "@angular-devkit/build-ng-packagr": "~0.900.3",
-    "@angular/cli": "^9.0.3",
-    "@angular/common": "^9.0.2",
-    "@angular/compiler": "^9.0.2",
-    "@angular/compiler-cli": "^9.0.2",
-    "@angular/core": "^9.0.2",
-    "@angular/forms": "^9.0.2",
-    "@angular/language-service": "^9.0.2",
-    "@angular/platform-browser": "^9.0.2",
-    "@angular/platform-browser-dynamic": "^9.0.2",
-    "@types/jasmine": "^3.3.8",
-    "@types/jasminewd2": "^2.0.3",
-    "@types/node": "^12.11.1",
-    "codelyzer": "^5.1.2",
-    "copyfiles": "^2.2.0",
+    "@angular-devkit/build-angular": "^16.2.6",
+    "@angular-eslint/builder": "^16.2.0",
+    "@angular-devkit/architect": "^0.1602.6",
+    "@angular-eslint/eslint-plugin": "^16.2.0",
+    "@angular-eslint/schematics": "^16.2.0",
+    "@angular/cli": "^16.2.6",
+    "@angular/common": "^16.2.10",
+    "@angular/compiler": "^16.2.10",
+    "@angular/compiler-cli": "^16.2.10",
+    "@angular/core": "^16.2.10",
+    "@angular/forms": "^16.2.10",
+    "@angular/language-service": "^16.2.10",
+    "@angular/platform-browser": "^16.2.10",
+    "@angular/platform-browser-dynamic": "^16.2.10",
+    "@types/jasmine": "^5.1.1",
+    "@types/jasminewd2": "^2.0.12",
+    "@types/node": "^20.8.7",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "codelyzer": "^6.0.2",
     "compodoc": "^0.0.41",
-    "core-js": "^2.6.5",
-    "gh-pages": "^2.2.0",
-    "jasmine-core": "^3.4.0",
-    "jasmine-spec-reporter": "^4.2.1",
-    "karma": "^4.1.0",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-coverage-istanbul-reporter": "^2.0.1",
-    "karma-jasmine": "^2.0.1",
-    "karma-jasmine-html-reporter": "^1.4.0",
-    "ng-packagr": "^9.0.0",
-    "node-sass": "^4.13.1",
-    "protractor": "^5.4.0",
-    "rxjs": "~6.5.4",
-    "ts-node": "^7.0.0",
-    "tslint": "^5.15.0",
-    "typescript": "3.7.5",
-    "zone.js": "~0.10.2"
+    "copyfiles": "^2.4.1",
+    "core-js": "^3.33.0",
+    "eslint": "^8.51.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsdoc": "^46.8.2",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "gh-pages": "^6.0.0",
+    "jasmine-core": "^5.1.1",
+    "jasmine-spec-reporter": "^7.0.0",
+    "karma": "~6.4.2",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-coverage-istanbul-reporter": "^3.0.3",
+    "karma-jasmine": "^5.1.0",
+    "karma-jasmine-html-reporter": "^2.1.0",
+    "ng-packagr": "^16.2.3",
+    "protractor": "~7.0.0",
+    "puppeteer": "^21.3.8",
+    "rxjs": "~7.8.1",
+    "sass": "^1.69.4",
+    "ts-node": "^10.9.1",
+    "typescript": "5.1.6",
+    "zone.js": "~0.13.3"
   },
   "dependencies": {
-    "tslib": "^1.10.0"
+    "tslib": "^2.6.2"
   }
 }
