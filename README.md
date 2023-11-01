@@ -39,11 +39,12 @@ Play with the [Demo here](https://shout.github.io/Angular-QueryBuilder/demo/).
 import { QueryBuilderModule } from "angular2-query-builder";
 import { AppComponent } from "./app.component"
 
-@NgModule(imports: [
-  ...,
-  QueryBuilderModule,
-  IonicModule.forRoot(AppComponent) // (Optional) for IonicFramework 2+
-])
+@NgModule({
+    imports: [
+        QueryBuilderModule,
+        IonicModule.forRoot(AppComponent) // (Optional) for IonicFramework 2+
+    ]
+})
 export class AppModule { }
 ```
 
@@ -104,9 +105,9 @@ query = {
 
 config: QueryBuilderConfig = {
   fields: {
-    birthday: {name: 'Birthday', type: 'date', operators: ['=', '<=', '>']
-      defaultValue: (() => return new Date())
-    },
+    birthday: {name: 'Birthday', type: 'date', operators: ['=', '<=', '>'],
+      defaultValue: (() => new Date())
+    }
   }
 }
 ```
