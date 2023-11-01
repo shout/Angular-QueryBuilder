@@ -1,6 +1,6 @@
 import { UntypedFormBuilder, UntypedFormControl } from '@angular/forms';
 import { Component } from '@angular/core';
-import { QueryBuilderClassNames, QueryBuilderConfig } from 'angular2-query-builder';
+import { QueryBuilderClassNames, QueryBuilderConfig } from 'shout-angular-query-builder';
 
 @Component({
     selector: 'app-root',
