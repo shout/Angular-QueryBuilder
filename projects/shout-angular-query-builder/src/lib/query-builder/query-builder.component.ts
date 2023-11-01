@@ -147,7 +147,7 @@ export class QueryBuilderComponent implements OnInit, OnChanges, ControlValueAcc
     @ContentChild(QueryOperatorDirective) operatorTemplate: QueryOperatorDirective;
     @ContentChild(QueryRemoveButtonDirective) removeButtonTemplate: QueryRemoveButtonDirective;
     @ContentChild(QueryEmptyWarningDirective) emptyWarningTemplate: QueryEmptyWarningDirective;
-    @ContentChildren(QueryInputDirective) inputTemplates: QueryList<QueryInputDirective>;
+    @ContentChildren(QueryInputDirective) inputTemplates: QueryList<QueryInputDirective> = new QueryList<QueryInputDirective>();
     @ContentChild(QueryArrowIconDirective) arrowIconTemplate: QueryArrowIconDirective;
 
     private defaultTemplateTypes: string[] = [

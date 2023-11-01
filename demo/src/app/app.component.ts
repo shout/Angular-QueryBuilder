@@ -155,7 +155,7 @@ import { QueryBuilderClassNames, QueryBuilderConfig } from 'shout-angular-query-
   </query-builder>
   `,
     styles: [`
-  /deep/ html {
+  ::ng-deep html {
     font: 14px sans-serif;
     margin: 30px;
   }
