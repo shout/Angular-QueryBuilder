@@ -22,13 +22,13 @@ Angular 16
 `npm install angular2-query-builder`
 
 ## Demo
-Play with the [Demo here](https://zebzhao.github.io/Angular-QueryBuilder/demo/).
+Play with the [Demo here](https://shout.github.io/Angular-QueryBuilder/demo/).
 
-[Editable Demo](https://zebzhao.github.io/Angular-QueryBuilder/editor/)
+[Editable Demo](https://shout.github.io/Angular-QueryBuilder/editor/)
 
 ## Documentation
 
-[Documentation link](https://zebzhao.github.io/Angular-QueryBuilder/)
+[Documentation link](https://shout.github.io/Angular-QueryBuilder/)
 
 # Examples
 
@@ -113,7 +113,7 @@ config: QueryBuilderConfig = {
 
 ## Custom Styling (with Bootstrap 4)
 
-[Bootstrap demo](https://zebzhao.github.io/Angular-QueryBuilder/demo/).
+[Bootstrap demo](https://shout.github.io/Angular-QueryBuilder/demo/).
 
 ##### `app.component.html`
 ```html
@@ -151,7 +151,7 @@ classNames: QueryBuilderClassNames = {
 
 ## Customizing with Angular Material
 
-Example of how you can completely customize the query component with another library like Angular Material. For the full example, please look at the [source code](https://github.com/zebzhao/Angular-QueryBuilder/blob/master/demo/src/app/app.component.ts) provided in the demo.
+Example of how you can completely customize the query component with another library like Angular Material. For the full example, please look at the [source code](https://github.com/shout/Angular-QueryBuilder/blob/master/demo/src/app/app.component.ts) provided in the demo.
 
 #### `app.component.html`
 
@@ -207,13 +207,13 @@ Example of how you can completely customize the query component with another lib
 
 ## Property Bindings Quick Reference
 
-See [documentation](https://zebzhao.github.io/Angular-QueryBuilder/) for more details on interfaces and properties.
+See [documentation](https://shout.github.io/Angular-QueryBuilder/) for more details on interfaces and properties.
 
 #### `query-builder`
 |Name|Type|Required|Default|Description|
 |:--- |:--- |:--- |:--- |:--- |
 |`allowRuleset`|`boolean`|Optional|`true`| Displays the `+ Ruleset` button if `true`. |
-|`allowCollapse`|`boolean`|Optional|`false`| Enables collapsible rule sets if `true`. ([See Demo](https://zebzhao.github.io/Angular-QueryBuilder/demo/)) |
+|`allowCollapse`|`boolean`|Optional|`false`| Enables collapsible rule sets if `true`. ([See Demo](https://shout.github.io/Angular-QueryBuilder/demo/)) |
 |`classNames`|`object`|Optional|| CSS class names for different child elements in `query-builder` component. |
 |`config`|`QueryBuilderConfig`|Required|| Configuration object for the main component. |
 |`data`|`Ruleset`|Optional|| (Use `ngModel` or `value` instead.) |
@@ -226,7 +226,7 @@ See [documentation](https://zebzhao.github.io/Angular-QueryBuilder/) for more de
 
 ## Structural Directives
 
-Use these directives to replace different parts of query builder with custom components. See [example](#customizing-with-angular-material), or [demo](https://zebzhao.github.io/Angular-QueryBuilder/demo/) to see how it's done.
+Use these directives to replace different parts of query builder with custom components. See [example](#customizing-with-angular-material), or [demo](https://shout.github.io/Angular-QueryBuilder/demo/) to see how it's done.
 
 #### `queryInput`
 
