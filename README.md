@@ -82,7 +82,7 @@ export class AppComponent {
   }
 }
 ```
-
+~~~~
 ## Custom Input Components
 
 ##### `app.component.html`
