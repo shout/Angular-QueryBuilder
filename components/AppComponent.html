@@ -516,7 +516,7 @@
             <tr>
                 <td class="col-md-3">styles</td>
                 <td class="col-md-9"><code>
-  /deep/ html {
+  ::ng-deep html {
     font: 14px sans-serif;
     margin: 30px;
   }
@@ -572,7 +572,7 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <code>constructor(formBuilder: <a href="https://angular.io/docs/ts/latest/api/forms/index/FormBuilder-class.html" target="_blank" >FormBuilder</a>)</code>
+                            <code>constructor(formBuilder: UntypedFormBuilder)</code>
                         </td>
                     </tr>
     
@@ -678,7 +678,7 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <span class="modifier-icon fa fa-circle"></span><code>bootstrapClassNames:     <code>any</code>
+                            <span class="modifier-icon fa fa-circle"></span><code>bootstrapClassNames:     <code>QueryBuilderClassNames</code>
     </bcode>
                         </td>
                     </tr>
@@ -693,7 +693,7 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <span class="modifier-icon fa fa-circle"></span><code>config:     <code>any</code>
+                            <span class="modifier-icon fa fa-circle"></span><code>config:     <code>QueryBuilderConfig</code>
     </bcode>
                         </td>
                     </tr>
@@ -708,7 +708,7 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <span class="modifier-icon fa fa-circle"></span><code>currentConfig:     <code>any</code>
+                            <span class="modifier-icon fa fa-circle"></span><code>currentConfig:     <code>QueryBuilderConfig</code>
     </bcode>
                         </td>
                     </tr>
@@ -723,7 +723,7 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <span class="modifier-icon fa fa-circle"></span><code>entityConfig:     <code>any</code>
+                            <span class="modifier-icon fa fa-circle"></span><code>entityConfig:     <code>QueryBuilderConfig</code>
     </bcode>
                         </td>
                     </tr>
@@ -782,9 +782,9 @@
     </section>
 </div>
         <div class="tab-pane fade tab-source-code" id="source">
-            <pre><code class="hljs javascript">import { FormBuilder, FormControl } from &#x27;@angular/forms&#x27;;
+            <pre><code class="hljs javascript">import { UntypedFormBuilder, UntypedFormControl } from &#x27;@angular/forms&#x27;;
 import { Component } from &#x27;@angular/core&#x27;;
-import { QueryBuilderClassNames, QueryBuilderConfig } from &#x27;angular2-query-builder&#x27;;
+import { QueryBuilderClassNames, QueryBuilderConfig } from &#x27;shout-angular-query-builder&#x27;;
 
 @Component({
     selector: &#x27;app-root&#x27;,
@@ -939,7 +939,7 @@ import { QueryBuilderClassNames, QueryBuilderConfig } from &#x27;angular2-query-
   &lt;/query-builder&gt;
   &#x60;,
     styles: [&#x60;
-  /deep/ html {
+  ::ng-deep html {
     font: 14px sans-serif;
     margin: 30px;
   }
@@ -976,7 +976,7 @@ import { QueryBuilderClassNames, QueryBuilderConfig } from &#x27;angular2-query-
   &#x60;]
 })
 export class AppComponent {
-    public queryCtrl: FormControl;
+    public queryCtrl: UntypedFormControl;
 
     public bootstrapClassNames: QueryBuilderClassNames &#x3D; {
         removeIcon: &#x27;fa fa-minus&#x27;,
@@ -1096,7 +1096,7 @@ export class AppComponent {
     public persistValueOnFieldChange: boolean &#x3D; false;
 
     constructor(
-        private formBuilder: FormBuilder
+        private formBuilder: UntypedFormBuilder
     ) {
         this.queryCtrl &#x3D; this.formBuilder.control(this.query);
         this.currentConfig &#x3D; this.config;
