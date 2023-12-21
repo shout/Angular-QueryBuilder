@@ -4,7 +4,9 @@
     "outDir": "../../out-tsc/lib",
     "declaration": true,
     "inlineSources": true,
-    "types": [],
+    "types": [
+      "@angular/localize"
+    ],
     "target": "ES2022",
     "module": "esnext",
     "moduleResolution": "node",

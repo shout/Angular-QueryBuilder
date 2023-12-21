@@ -231,7 +231,7 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/compiler-cli@^16.0.0", "@angular/compiler-cli@^16.0.0 || ^16.2.0-next.0", "@angular/compiler-cli@^16.2.10":
+"@angular/compiler-cli@^16.0.0", "@angular/compiler-cli@^16.0.0 || ^16.2.0-next.0", "@angular/compiler-cli@^16.2.10", "@angular/compiler-cli@16.2.10":
   version "16.2.10"
   resolved "https://registry.npmjs.org/@angular/compiler-cli/-/compiler-cli-16.2.10.tgz"
   integrity sha512-swgmtm4R23vQV9nJTXdDEFpOyIw3kz80mdT9qo3VId/2rqenOK253JsFypoqEj/fKzjV9gwXtTbmrMlhVyuyxw==
@@ -280,6 +280,15 @@
   version "16.2.10"
   resolved "https://registry.npmjs.org/@angular/language-service/-/language-service-16.2.10.tgz"
   integrity sha512-r3KNXizhZDtj5/L68xnrtgHp5iSYf4NPyWHovoyAWClabsZ64cK38fOzMNCT/otrwqJWlz9ELnW/b/pxR+M9sw==
+
+"@angular/localize@^16.0.0":
+  version "16.2.10"
+  resolved "https://registry.npmjs.org/@angular/localize/-/localize-16.2.10.tgz"
+  integrity sha512-LrumtnstYOJ7h1FoXrO7bFxAgtoeQmhkRWHUSIV0J5hhnembPL5Kgc7hsGsMhPyIJQ1Opgx6Gdi7+NWQHpC/wg==
+  dependencies:
+    "@babel/core" "7.23.2"
+    fast-glob "3.3.0"
+    yargs "^17.2.1"
 
 "@angular/platform-browser-dynamic@^16.2.10":
   version "16.2.10"
@@ -4931,6 +4940,17 @@ fast-glob@3.2.7:
   version "3.2.7"
   resolved "https://registry.npmjs.org/fast-glob/-/fast-glob-3.2.7.tgz"
   integrity sha512-rYGMRwip6lUMvYD3BTScMwT1HtAs2d71SMv66Vrxs0IekGZEjhM0pcMfjQPnknBt2zeCwQMEupiN02ZP4DiT1Q==
+  dependencies:
+    "@nodelib/fs.stat" "^2.0.2"
+    "@nodelib/fs.walk" "^1.2.3"
+    glob-parent "^5.1.2"
+    merge2 "^1.3.0"
+    micromatch "^4.0.4"
+
+fast-glob@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.0.tgz"
+  integrity sha512-ChDuvbOypPuNjO8yIDf36x7BlZX1smcUMTTcyoIjycexOxd6DFsKsg21qVBzEmr3G7fUKIRy2/psii+CIUt7FA==
   dependencies:
     "@nodelib/fs.stat" "^2.0.2"
     "@nodelib/fs.walk" "^1.2.3"
