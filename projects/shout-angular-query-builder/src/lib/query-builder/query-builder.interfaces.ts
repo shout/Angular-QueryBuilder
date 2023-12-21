@@ -23,13 +23,20 @@ export interface FieldMap {
     [key: string]: Field;
 }
 
+export interface LocalizedOperator {
+    localized: string;
+    value: string;
+}
+
+export type Operator = string | LocalizedOperator;
+
 export interface Field {
     name: string;
     value?: string;
     type: string;
     nullable?: boolean;
     options?: Option[];
-    operators?: string[];
+    operators?: Operator[];
     defaultValue?: any;
     defaultOperator?: any;
     entity?: string;
@@ -90,7 +97,7 @@ export interface QueryBuilderConfig {
     fields: FieldMap;
     entities?: EntityMap;
     allowEmptyRulesets?: boolean;
-    getOperators?: (fieldName: string, field: Field) => string[];
+    getOperators?: (fieldName: string, field: Field) => Operator[];
     getInputType?: (field: string, operator: string) => string;
     getOptions?: (field: string) => Option[];
     addRuleSet?: (parent: RuleSet) => void;
@@ -138,7 +145,8 @@ export interface FieldContext {
 export interface OperatorContext {
     onChange: () => void;
     getDisabledState: () => boolean;
-    operators: string[];
+    getOperatorValue: (x: Operator) => string;
+    operators: Operator[];
     $implicit: Rule;
 }
 
