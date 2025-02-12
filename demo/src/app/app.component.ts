@@ -189,7 +189,8 @@ import { QueryBuilderClassNames, QueryBuilderConfig } from 'shout-angular-query-
     width: 100%;
     height: 300px;
   }
-  `]
+  `],
+    standalone: false
 })
 export class AppComponent {
     public queryCtrl: UntypedFormControl;
