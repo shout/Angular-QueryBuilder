@@ -7,6 +7,7 @@
     "types": [
       "@angular/localize"
     ],
+    "esModuleInterop": true,
     "target": "ES2022",
     "module": "esnext",
     "moduleResolution": "node",
@@ -21,7 +22,6 @@
       "dom"
     ],
     "baseUrl": "./",
-    "downlevelIteration": true,
     "importHelpers": true,
     "typeRoots": [
       "node_modules/@types"
